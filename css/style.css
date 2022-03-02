@@ -1,0 +1,291 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+.fs-3r {
+    font-size: 3rem;
+}
+.fs-25 {
+    font-size: 25px;
+}
+/* header */
+header{
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.logo i {
+    color: #35a22c;
+}
+.logo span {
+    font-size: 2rem;
+}
+.menu li {
+    margin: 0 1rem;
+}
+.menu li::after {
+    content: "";
+    background-color: #35a22c;
+    width: 0;
+    height: 2px;
+    display: block;
+    transition: all 0.5s;
+}
+.menu li.active::after {
+width: 100%;
+}
+#collapsibleNavbar .menu li a.active {
+    color: #35a22c;
+}
+#collapsibleNavbar .menu a {
+    color: white;
+    transition: all 0.5s;
+}
+.menu li:hover::after {
+    width: 100%;
+}
+#collapsibleNavbar .menu li:hover a {
+    color: #35a22c;
+}
+
+/* carousel */
+.carousel-item {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.carousel-item:nth-child(1) {
+    background-image: url(./../image/finland.jpg);
+}
+.carousel-item:nth-child(2) {
+    background-image: url(./../image/mountains.jpg);
+}
+.carousel-item:nth-child(3) {
+    background-image: url(./../image/mountains-1.jpg);
+}
+.carousel__thumb {
+    width: 140px;
+    margin: auto;
+}
+.carousel__thumb img {
+    width: 100%;
+    border-radius: 50%;
+}
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel-caption h3 {
+    animation-delay: 1s;
+}
+.carousel-caption p {
+    animation-delay: 2s;
+}
+#demo .carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.5;
+}
+#demo .carousel-indicators li.active {
+    background-color: #35a22c;
+    opacity: 1;
+}
+.overlay {
+    background: #2425306b;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* project */
+#project {
+    padding: 3rem 0;
+}
+.project__title {
+    max-width: 750px;
+    text-align: center;
+    margin: 0 auto;
+}
+.project__title p {
+    margin: 20px 0;
+    color: gray;
+    font-size: 15px;
+}
+.nav-tabs {
+    justify-content: center;
+    margin-bottom: 2rem;
+    border: 0;
+}
+#project .project__content .nav-tabs li a.active{
+    background-color: #35a22c;
+    color: #fff;
+    border-color: #35a22c;
+}
+.project__content .nav-tabs .nav-link {
+    color: #1a1d2d;
+    border: 1px solid #1a1d2d;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+.card-title {
+    font-size: 18px;
+    text-align: center;
+}
+.card-text {
+    font-size: 16px;
+    text-align: center;
+}
+.card {
+    border-radius: 20px;
+    margin-bottom: 30px; 
+    box-shadow: 0 0 0.4rem rgb(0 0 0 / 13%);
+    animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+.card img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.tab-content .card .card-body {
+    border: 1px solid transparent;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.tab-content .card:hover .card-body {
+    border-color: #35a22c;
+    border-top-color: transparent;
+}
+.tab-content .card:hover .card-title {
+    color: #35a22c;
+}
+/* feature */
+.feature {
+    padding: 3rem 0;
+    background-image: url(./../image/3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.feature__title {
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+}
+.feature__title h2 {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+.feature__title p {
+    color: white;
+    font-size: 16px;
+}
+.feature__content {
+    text-align: center;
+    margin-top: 2rem;
+}
+.feature__item {
+    padding: 2rem;
+    background-color: #ffffff1a;
+    border: 1px solid #ffffff1a;
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.feature__item:hover {
+    background-color: black;
+    border-color: white;
+}
+.feature__item i {
+    color: #35a22c;
+}
+.feature__item h3 {
+    font-size: 20px;
+    color: white;
+    margin: 1.5rem 0;
+}
+.feature__item p {
+    color: white;
+}
+/* award */
+.award {
+    padding: 3rem 0;
+    position: relative;
+}
+.award__bg {
+    background-image: url(./../image/memphis_3.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.award__left {
+    background-color: #ffffff1a;
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 30%);
+}
+.award__left p {
+    color: #585858;
+    font-size: 16px;
+}
+.award__right p {
+    font-size: 16px;
+}
+.award__logo img {
+    width: 100%;
+    height: auto;
+}
+/* footer */
+footer{
+    background-color: #222;
+}
+.footer__logo {
+    text-align: center;
+}
+.footer__logo a {
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 20px;
+}
+.footer__logo i {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #aaa;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: all 1s;
+}
+.footer__logo a:hover i {
+    border-color: #35a22c;
+    color: #35a22c;
+}
+.footer__text {
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #585858;
+}
+.footer__text p {
+    color: #aaa;
+    font-size: 15px;
+}
+.footer__text a {
+    text-decoration: none;
+    color: #aaa;
+}
+.footer__text a:hover {
+    color: #35a22c;
+}
